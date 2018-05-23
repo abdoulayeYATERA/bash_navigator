@@ -1,18 +1,18 @@
-
+~~~
 NAME  
-
        bash_navigator is a tool to jump quickly in your bash navigation history
 
 SYNOPSIS  
         bb [delta]
-        bbb 
-        bf [delta]
-        bff
-        bj [jump_index]
-        bh 
-        bhelp
+        bbb  
+        bf [delta]  
+        bff  
+        bj [jump_index]  
+        bh  
+        bhelp  
 
 AVAILABILITY  
+
        bash, zsh
 
 DESCRIPTION  
@@ -20,7 +20,7 @@ DESCRIPTION
        IMPORTANT! Each shell instance has its own navigation history.
         
         bb          bash back, move back 
-        bbb         bash first, move bach to fist path 
+        bbb         bash first, move back to first path 
         bf          bash forward, move forward 
         bff         bash last, move forward to last path 
         bj          bash jump, move specific index path 
@@ -46,10 +46,10 @@ NOTES
 
               source /path/to/bash_navigator.sh
 
-       Restart your shell, cd around to build up the db.
+       Restart your shell (zsh/bash), cd around to build up the db.
 
    Configuration:  
-              IMPORTANT! These  settings  should  go  in  .bashrc/.zshrc BEFORE the line added above.
+              IMPORTANT! These  settings  should  go  in  .bashrc/.zshrc BEFORE the above source command.
 
               Set $_BASH_NAV_HIST_DB_FOLDER change the navigation database folder (default /tmp/bash_navigator).
               Set $_BASH_NAV_HIST_DB_MAX_SIZE change the number of paths to save in the navigation history (default 100).
@@ -66,7 +66,7 @@ NOTES
               _BASH_NAV_HIST_DB_FOLDER="~/.cache/bash_navigator"
               _BASH_NAV_HIST_DB_MAX_SIZE=20
               source /path/to/bash_navigator.sh
-            
   
 PROJECT  
       https://github.com/abdoulayeYATERA/bash_navigator
+~~~
