@@ -47,7 +47,7 @@ NOTES
               source /path/to/bash_navigator.sh
 
        Restart your shell (zsh/bash), cd around to build up the db.
-       To verify if the db is building up run the bash history command:
+       To verify if the db is building up run the bash navigator history command:
 
               bh
 
