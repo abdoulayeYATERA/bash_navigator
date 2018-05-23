@@ -29,16 +29,16 @@ DESCRIPTION
 
 EXAMPLES  
         bhelp       show bash navigator help page
-        bh          show navigation history
-        bb          go back in navigation history and indexes
+        bh          show navigation history and indexes
+        bb          go back in navigation history 
         bb 4        go back 4 times in navigation history
         bbb         go to first path in navigation history
         bf          go forward in navigation history
         bf 6        go forward 6 times in navigation history
         bff         go to last path in navigation history
         bj 78       go to the 78th path in navigation history
-        bj          as "bh" shows navigation history and indexes
-        
+        bj          show navigation history and indexes
+       
 NOTES  
   
    Installation:  
@@ -47,6 +47,11 @@ NOTES
               source /path/to/bash_navigator.sh
 
        Restart your shell (zsh/bash), cd around to build up the db.
+       To verify if the db is building up run the bash history command:
+
+              bh
+
+        NOW ENJOY, MOVE FASTER!!!
 
    Configuration:  
               IMPORTANT! These  settings  should  go  in  .bashrc/.zshrc BEFORE the above source command.
