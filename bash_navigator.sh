@@ -397,12 +397,12 @@ NOTES
 
               Set $_BASH_NAV_HIST_DB_FOLDER change the navigation database folder (default /tmp/bash_navigator).
               Set $_BASH_NAV_HIST_DB_MAX_SIZE change the number of paths to save in the navigation history (default 100).
-              Set $_BASH_NAVIGATOR_BACK bash change bash back command (default bb) 
-              Set $_BASH_NAVIGATOR_FORWARD bash change bash forward command (default bf) 
+              Set $_BASH_NAVIGATOR_BACK change bash back command (default bb) 
+              Set $_BASH_NAVIGATOR_FORWARD change bash forward command (default bf) 
               Set $_BASH_NAVIGATOR_SHOW_HISTORY change bash history command (default bh) 
               Set $_BASH_NAVIGATOR_FORWARD change bash forward command (default bf) 
               Set $_BASH_NAVIGATOR_JUMP change bash jump command (default bj) 
-              Set $_BASH_NAVIGATOR_FORWARD bash change bash forward command (default bf) 
+              Set $_BASH_NAVIGATOR_FORWARD change bash forward command (default bf) 
               Set $_BASH_NAVIGATOR_JUMP_TO_FIRST change bash jump to first command (default bbb) 
               Set $_BASH_NAVIGATOR_JUMP_TO_LAST change bash jump to last command (default bff) 
 
