@@ -56,8 +56,8 @@ NOTES
    Configuration:  
               IMPORTANT! These  settings  should  go  in  .bashrc/.zshrc BEFORE the above source command.
 
-              Set $_BASH_NAV_HIST_DB_FOLDER change the navigation database folder (default /tmp/bash_navigator).
-              Set $_BASH_NAV_HIST_DB_MAX_SIZE change the number of paths to save in the navigation history (default 100).
+              Set $_BASH_NAV_HIST_DB_FOLDER         change the navigation database folder (default /tmp/bash_navigator).
+              Set $_BASH_NAV_HIST_DB_MAX_SIZE       change the number of paths to save in the navigation history (default 100).
               Set $_BASH_NAVIGATOR_BACK             change bash back command (default bb) 
               Set $_BASH_NAVIGATOR_FORWARD          change bash forward command (default bf) 
               Set $_BASH_NAVIGATOR_SHOW_HISTORY     change bash history command (default bh) 
