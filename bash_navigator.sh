@@ -141,6 +141,18 @@ _bash_nav_precmd() {
     _bash_nav_save_next_move_to_nav_hist_db=1
     return
   fi
+  local most_recent_path_in_hist
+  most_recent_path_in_hist="$(_bash_nav_get_last_nav_hist_line)"
+  # if new path and most recent path in navigation history are the same
+  # do nothing to navigation history
+  # eg: after a move back "bb" and cd to where we were
+  if [ "$new_path" = "$most_recent_path_in_hist" ]; then
+    #update navigation index to most recent
+    local nav_hist_size
+    nav_hist_size="$(_bash_nav_get_nav_hist_size)" 
+    _bash_nav_current_index_nav_hist="$nav_hist_size"
+    return
+  fi
   # add new path to database
   _bash_nav_add_to_hist "$new_path"
 }
@@ -218,6 +230,7 @@ _bash_nav_get_file_line() {
 }
 
 # get the last line of the bash navigation history
+# the most recent path in navigation history
 _bash_nav_get_last_nav_hist_line() {
   _bash_nav_get_file_last_line "$_bash_nav_db"
 }
