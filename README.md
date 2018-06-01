@@ -1,3 +1,8 @@
+  bash_navigator is a tool to jump quickly in your bash navigation history
+  
+  
+![preview_image](https://user-images.githubusercontent.com/9435855/40840582-97f2b53c-65a7-11e8-95e7-99af9668dc42.png)
+
 ~~~
 NAME  
        bash_navigator is a tool to jump quickly in your bash navigation history
