@@ -91,8 +91,8 @@ _bash_nav_jump() {
 # method to move in bash navigation history
 # argument 1: the total history size 
 # argument 2: the move value
-# eg $1 = 3 => go forward 3 times in navigation history
-# eg $1 = -7 => go back 7 times in navigation history
+# eg $2 = 3 => go forward 3 times in navigation history
+# eg $2 = -7 => go back 7 times in navigation history
 # you can use _bash_nav_show_hist to list all navigation history
 # (you can see that this function juste calculate 
 # the target index from the delta and use the "jump" mode method)
