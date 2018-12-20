@@ -8,6 +8,9 @@ NAME
        bash_navigator is a tool to jump quickly in your bash navigation history  
        IMPORTANT! Each shell instance has its own navigation history by default.
 
+ARGUMENTS  
+        -s (--single-nav-hist) : share the same navigation history beetween all your shell instances 
+
 SYNOPSIS  
         bb [delta]
         bbb  

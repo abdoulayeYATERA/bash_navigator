@@ -22,12 +22,13 @@ _bash_nav_current_index_nav_hist=1
 _bash_nav_save_next_move_to_nav_hist_db=1
 #create a unique file as this bash instance database
 _bash_nav_timestamp=$(date +%s)
+
 if [ "$1" = "--single-nav-hist" ] || [ "$0" = "-s" ] ; then
   _bash_nav_db_filename="bash_navigator_database.txt"
 else
   _bash_nav_db_filename="bash_navigator_database_${_bash_nav_timestamp}.txt"
 fi
-echo "$_bash_nav_db_filename"
+
 _bash_nav_db=${_bash_nav_hist_db_folder}/${_bash_nav_db_filename}
 #the current_path
 _bash_nav_current_path=""
