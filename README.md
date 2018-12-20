@@ -25,7 +25,7 @@ AVAILABILITY
        bash, zsh
 
 DESCRIPTION  
-       IMPORTANT! Each shell instance has its own navigation history.
+       IMPORTANT! Each shell instance has its own navigation history by default.
         
         bb          bash back, move back 
         bbb         bash first, move back to first path 
