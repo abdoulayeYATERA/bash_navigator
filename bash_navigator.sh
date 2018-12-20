@@ -22,7 +22,12 @@ _bash_nav_current_index_nav_hist=1
 _bash_nav_save_next_move_to_nav_hist_db=1
 #create a unique file as this bash instance database
 _bash_nav_timestamp=$(date +%s)
-_bash_nav_db_filename="bash_navigator_database_${_bash_nav_timestamp}.txt"
+if [ "$1" = "--single-nav-hist" ] || [ "$0" = "-s" ] ; then
+  _bash_nav_db_filename="bash_navigator_database.txt"
+else
+  _bash_nav_db_filename="bash_navigator_database_${_bash_nav_timestamp}.txt"
+fi
+echo "$_bash_nav_db_filename"
 _bash_nav_db=${_bash_nav_hist_db_folder}/${_bash_nav_db_filename}
 #the current_path
 _bash_nav_current_path=""
@@ -336,6 +341,10 @@ fi
 _bash_nav_help_text='
 NAME  
        bash_navigator is a tool to jump quickly in your bash navigation history
+       IMPORTANT! Each shell instance has its own navigation history by default.
+
+ARGUMENTS
+        -s (--single-nav-hist) : share the same navigation history beetween all your shell instances 
 
 SYNOPSIS  
         bb [delta]
@@ -351,8 +360,7 @@ AVAILABILITY
        bash, zsh
 
 DESCRIPTION  
-       bash_navigator is a tool to jump quickly in your bash navigation history. 
-       IMPORTANT! Each shell instance has its own navigation history.
+       IMPORTANT! Each shell instance has its own navigation history by default.
         
         bb          bash back, move back 
         bbb         bash first, move back to first path 
@@ -381,6 +389,10 @@ NOTES
 
               source /path/to/bash_navigator.sh
 
+       If you prefer to share the same navigation history beetween all your shell instances: 
+
+              source /path/to/bash_navigator.sh -s
+
        Restart your shell (zsh/bash), cd around to build up the db.
        To verify if the db is building up run the bash navigator history command:
 
@@ -405,7 +417,7 @@ NOTES
       Configuration example:  
               _BASH_NAV_HIST_DB_FOLDER="~/.cache/bash_navigator"
               _BASH_NAV_HIST_DB_MAX_SIZE=20
-              source /path/to/bash_navigator.sh
+              source /path/to/bash_navigator.sh -s
   
 PROJECT  
       https://github.com/abdoulayeYATERA/bash_navigator

@@ -5,7 +5,8 @@
 
 ~~~
 NAME  
-       bash_navigator is a tool to jump quickly in your bash navigation history
+       bash_navigator is a tool to jump quickly in your bash navigation history  
+       IMPORTANT! Each shell instance has its own navigation history by default.
 
 SYNOPSIS  
         bb [delta]
@@ -21,7 +22,6 @@ AVAILABILITY
        bash, zsh
 
 DESCRIPTION  
-       bash_navigator is a tool to jump quickly in your bash navigation history. 
        IMPORTANT! Each shell instance has its own navigation history.
         
         bb          bash back, move back 
@@ -49,7 +49,11 @@ NOTES
    Installation:  
        Put something like this in your $HOME/.bashrc or $HOME/.zshrc:
 
-              source /path/to/bash_navigator.sh
+              source /path/to/bash_navigator.sh  
+
+       If you prefer to share the same navigation history beetween all your shell instances: 
+
+              source /path/to/bash_navigator.sh -s  
 
        Restart your shell (zsh/bash), cd around to build up the db.
        To verify if the db is building up run the bash navigator history command:
@@ -75,7 +79,7 @@ NOTES
       Configuration example:  
               _BASH_NAV_HIST_DB_FOLDER="~/.cache/bash_navigator"
               _BASH_NAV_HIST_DB_MAX_SIZE=20
-              source /path/to/bash_navigator.sh
+              source /path/to/bash_navigator.sh -s
   
 PROJECT  
       https://github.com/abdoulayeYATERA/bash_navigator
