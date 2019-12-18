@@ -37,15 +37,15 @@ DESCRIPTION
 
 EXAMPLES  
         bhelp       show bash navigator help page
-        bh          show navigation history and indexes
+        bh          show navigation history
+        bj          navigation history jump dialog (needs dialog)
+        bj 78       go to the 78th path in navigation history
         bb          go back in navigation history 
         bb 4        go back 4 times in navigation history
         bbb         go to first path in navigation history
         bf          go forward in navigation history
         bf 6        go forward 6 times in navigation history
         bff         go to last path in navigation history
-        bj 78       go to the 78th path in navigation history
-        bj          show navigation history and indexes
        
 NOTES  
   
@@ -68,7 +68,7 @@ NOTES
    Configuration:  
               IMPORTANT! These  settings  should  go  in  .bashrc/.zshrc BEFORE the above source command.
 
-              Set $_BASH_NAV_HIST_DB_FOLDER         change the navigation database folder (default /tmp/bash_navigator).
+              Set $_BASH_NAV_HIST_DB_FOLDER         change the navigation database folder (default ~/.cache/bash_navigator).
               Set $_BASH_NAV_HIST_DB_MAX_SIZE       change the number of paths to save in the navigation history (default 100).
               Set $_BASH_NAVIGATOR_BACK             change bash back command (default bb) 
               Set $_BASH_NAVIGATOR_FORWARD          change bash forward command (default bf) 
