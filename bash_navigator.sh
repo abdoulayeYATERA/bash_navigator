@@ -118,7 +118,7 @@ _bash_nav_delta() {
   fi
   ## get the new index to move
   local index_to_move_on
-  index_to_move_on=$((_bash_nav_current_index_nav_hist + "$delta"))
+  index_to_move_on=$((_bash_nav_current_index_nav_hist + delta))
   _bash_nav_jump "$nav_hist_size" "$index_to_move_on"
 }
 
