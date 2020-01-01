@@ -220,12 +220,13 @@ _bash_nav_hist_jump() {
 # show van hist dialog where the user can
 # select where to go
 _bash_nav_hist_jump_dialog() {
-  local bash_nav_hist
-  bash_nav_hist=($(_bash_nav_show_hist))
+  local bash_nav_hist_for_jump_dialog
+  bash_nav_hist_for_jump_dialog=($(_bash_nav_hist_for_jump_dialog))
+  echo "${bash_nav_hist_for_jump_dialog[@]}"
   local jump_index
   jump_index=$(dialog --keep-tite --stdout  --title "Bash history navigator" \
     --menu "Please chose your navigation target" 400 400 50 \
-    "${bash_nav_hist[@]}")
+    "${bash_nav_hist_for_jump_dialog[@]}")
       if [[ "$jump_index" == *"*"* ]]; then
         echo "Your already are in the target directory"
         return 0
@@ -287,7 +288,11 @@ _bash_nav_get_nav_hist_size() {
 # show navigation history
 # an * is added to show where we are in the navigation history
 _bash_nav_show_hist() {
-  < "$_bash_nav_db" nl -n ln | sed "${_bash_nav_current_index_nav_hist}s/^/*/"
+  < "$_bash_nav_db"  nl -n ln | sed "${_bash_nav_current_index_nav_hist}s/^/*/"
+}
+
+_bash_nav_hist_for_jump_dialog() {
+  < "$_bash_nav_db"  sed "s/^/\"/" | sed "s/$/\"/" | nl -n ln | sed "${_bash_nav_current_index_nav_hist}s/^/*/" | tac
 }
 
 # show help page
