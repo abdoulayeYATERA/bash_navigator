@@ -222,7 +222,6 @@ _bash_nav_hist_jump() {
 _bash_nav_hist_jump_dialog() {
   local bash_nav_hist_for_jump_dialog
   bash_nav_hist_for_jump_dialog=($(_bash_nav_hist_for_jump_dialog))
-  echo "${bash_nav_hist_for_jump_dialog[@]}"
   local jump_index
   jump_index=$(dialog --keep-tite --stdout  --title "Bash history navigator" \
     --menu "Please chose your navigation target" 400 400 50 \
@@ -235,7 +234,7 @@ _bash_nav_hist_jump_dialog() {
       if [ -n "$jump_index" ]; then
         _bash_nav_hist_jump "$jump_index"
       fi
-    }
+  }
 
 # jump to last (newest) path in navigation history
 _bash_nav_hist_jump_to_last() {
