@@ -221,7 +221,10 @@ _bash_nav_hist_jump() {
 # select where to go
 _bash_nav_hist_jump_dialog() {
   local bash_nav_hist_for_jump_dialog
-  bash_nav_hist_for_jump_dialog=($(_bash_nav_hist_for_jump_dialog))
+  local bash_nav_hist_for_jump_dialog_string
+  bash_nav_hist_for_jump_dialog_string=$(_bash_nav_hist_for_jump_dialog)
+  #eval needed for zsh, see: https://apple.stackexchange.com/a/351294
+  eval "bash_nav_hist_for_jump_dialog=($bash_nav_hist_for_jump_dialog_string)"
   local jump_index
   jump_index=$(dialog --keep-tite --stdout  --title "Bash history navigator" \
     --menu "Please chose your navigation target" 400 400 50 \
@@ -291,7 +294,7 @@ _bash_nav_show_hist() {
 }
 
 _bash_nav_hist_for_jump_dialog() {
-  < "$_bash_nav_db"  sed "s/^/\"/" | sed "s/$/\"/" | nl -n ln | sed "${_bash_nav_current_index_nav_hist}s/^/*/" | tac
+  < "$_bash_nav_db"  sed "s/^/\"/" | sed "s/$/\"/" | nl -n ln | sed "${_bash_nav_current_index_nav_hist}s/^/-/" | tac
 }
 
 # show help page
