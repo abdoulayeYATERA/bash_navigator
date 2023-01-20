@@ -8,7 +8,7 @@
 # all methods and global varibales names start with "_bash_nav"
 
 _bash_nav_default_hist_db_folder="${HOME}/.cache/bash_navigator"
-_bash_nav_default_hist_db_max_size=100
+_bash_nav_default_hist_db_max_size=1000
 # expand hist db folder if there is a expandable character like '~'
 _BASH_NAV_HIST_DB_FOLDER=$(eval echo "$_BASH_NAV_HIST_DB_FOLDER")
 #bash nav history database folder
@@ -369,7 +369,7 @@ NOTES
               IMPORTANT! These  settings  should  go  in  .bashrc/.zshrc BEFORE the above source command.
 
               Set _BASH_NAV_HIST_DB_FOLDER : change the navigation database folder (default ${HOME}/.cache/bash_navigator).
-              Set _BASH_NAV_HIST_DB_MAX_SIZE : change the number of paths to save in the navigation history (default 100).
+              Set _BASH_NAV_HIST_DB_MAX_SIZE : change the number of paths to save in the navigation history (default 1000).
               Set _BASH_NAVIGATOR_BACK : change bash back command (default bb)
               Set _BASH_NAVIGATOR_FORWARD : change bash forward command (default bf)
               Set _BASH_NAVIGATOR_SHOW_HISTORY : change bash history command (default bh)
