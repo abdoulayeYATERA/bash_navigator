@@ -437,6 +437,16 @@ _bash_nav_write_file() {
   echo "$text_to_write" > "$file"
 }
 
+_bash_nav_hist_back_zsh_zle() {
+  _bash_nav_hist_back "$@"
+  zle accept-line
+}
+
+_bash_nav_hist_forward_zsh_zle() {
+  _bash_nav_hist_forwad "$@"
+  zle accept-line
+}
+
 # get alias config
 _BASH_NAVIGATOR_BACK=${_BASH_NAVIGATOR_BACK:-bb}
 _BASH_NAVIGATOR_FORWARD=${_BASH_NAVIGATOR_FORWARD:-bf}
